@@ -1,8 +1,8 @@
 window.addEventListener('scroll', scrolles)
 function scrolles() {
 	if (this.scrollY >= 6900) {
-		total(one, 100, 24, oneBlock, 1)
-		total(two, 6, 980, twoBlock)
+		total(one, 120, 24, oneBlock, 1)
+		total(two, 9, 980, twoBlock)
 		total(three, 15, 920, threeBlock)
 	}
 }
@@ -27,3 +27,12 @@ function total(elem, sek, coins, block, added) {
 		}
 	}, sek)
 }
+
+//scroll top btn
+let scrollTopBtn = document.querySelector('.scrollTop')
+scrollTopBtn.addEventListener('click', () => {
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	})
+})
